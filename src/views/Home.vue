@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="left-panel">
+      <wx-searchbox></wx-searchbox>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  import WxSearchbox from '../components/searchbox';
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  export default {
+    name: 'WxHome',
+    components: {
+      WxSearchbox
+    },
+    created() {
+
+    }
   }
-}
 </script>
+
+<style lang="scss">
+  .left-panel {
+    overflow: hidden;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    bottom: 60px;
+    pointer-events: none;
+  }
+</style>
